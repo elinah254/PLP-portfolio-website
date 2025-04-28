@@ -194,3 +194,142 @@ nav {
 .side-nav i {
   font-size: 1.2rem;
 }
+
+/* Skills section */
+main {
+  padding: 60px 0;
+}
+
+.skills-container{
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border: 1px solid #eaeaea;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.img {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+.img img {
+  height: 100%;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  transition: transform 0.5s ease;
+}
+
+.img:hover img {
+  transform: scale(1.05);
+}
+
+.skills-section{
+  padding: 40px;
+}
+
+.skills-section p {
+  color: #01251b;
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.skill-item {
+  margin-bottom: 1.5rem;
+}
+.skill-name {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  color: #01251b;
+  font-size: 12px;
+  text-transform: capitalize;
+}
+.progress-container {
+  width: 100%;
+  height: 8px;
+  background-color: #aac1c9;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  transition: transform 0.5s ease;
+}
+
+.progress-container:hover {
+  transform: scale(1.2);
+}
+
+.progress-bar {
+  height: 100%;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #0c9e88, #0c6e9e);
+  width: 75%;
+}
+
+.progress-text {
+  color: #0c9e88;
+  font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .skills-container {
+    flex-direction: row;
+  }
+
+  .img {
+    width: 45%;
+    height: auto;
+  }
+
+  .skills-section {
+    width: 55%;
+    padding: 50px;
+  }
+}
+
+/* Dropdown Menu */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #11232a;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 8px;
+  padding: 10px 0;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  display: block;
+  font-size: 0.9rem;
+}
+
+.dropdown-content a:hover {
+  background-color: #1d3a44;
+  color: #0c9e88;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  color: #0c9e88;
+}
