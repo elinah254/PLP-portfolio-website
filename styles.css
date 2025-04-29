@@ -1,6 +1,7 @@
-body {
+*{
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
   box-sizing: border-box;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -50,7 +51,9 @@ nav {
   transition: all 0.3s ease;
 }
 
+.nav-links a.active,
 .nav-links a:hover {
+  font-weight: bold;
   opacity: 0.8;
 }
 
@@ -58,6 +61,37 @@ nav {
   display: flex;
   gap: 15px;
   align-items: center;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropbtn {
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  color: #333;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.dropdown-content a {
+  color: #333;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 
 .hire-btn {
@@ -75,7 +109,8 @@ nav {
   background-color: #0b8a78;
 }
 
-.search-btn, .theme-btn {
+.search-btn,
+.theme-btn {
   background: none;
   border: none;
   color: white;
@@ -197,139 +232,249 @@ nav {
 
 /* Skills section */
 main {
-  padding: 60px 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
 }
 
-.skills-container{
+.page-container,
+.hobby-box-container {
+  width: 80%;
+  margin: 40px 0;
+}
+
+.skills-container,
+.hobby-container section{
   display: flex;
   flex-direction: row;
-  background-color: white;
-  overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-  border: 1px solid #eaeaea;
-  max-width: 1000px;
-  margin: 0 auto;
+  gap: 40px;
+  align-items: flex-start;
 }
+
 .img {
-  width: 100%;
-  height: 300px;
+  width: 45%;
+  max-width: 500px;
+  border-radius: 8px;
   overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
 }
+
 .img img {
-  height: 100%;
-  width: auto;
-  max-width: 100%;
-  object-fit: contain;
+  width: 100%;
+  height: auto;
+  display: block;
   transition: transform 0.5s ease;
 }
 
 .img:hover img {
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
-.skills-section{
-  padding: 40px;
+.skills-section {
+  width: 55%;
+  color:#0b8a78;
 }
 
 .skills-section p {
-  color: #01251b;
-  margin-bottom: 30px;
-  font-size: 1.1rem;
-  line-height: 1.8;
+  margin-bottom: 20px;
+  color: #011f1a;
 }
 
 .skill-item {
-  margin-bottom: 1.5rem;
-}
-.skill-name {
-  margin-bottom: 10px;
-  display: flex;
-  justify-content: space-between;
-  color: #01251b;
-  font-size: 12px;
-  text-transform: capitalize;
-}
-.progress-container {
-  width: 100%;
-  height: 8px;
-  background-color: #aac1c9;
-  border-radius: 4px;
-  margin-bottom: 10px;
-  overflow: hidden;
-  transition: transform 0.5s ease;
+  margin-bottom: 16px;
 }
 
-.progress-container:hover {
-  transform: scale(1.2);
+.skill-name {
+  display: flex;
+  justify-content: space-between;
+}
+
+.progress-container {
+  background-color: #ddd;
+  height: 10px;
+  border-radius: 5px;
+  overflow: hidden;
 }
 
 .progress-bar {
   height: 100%;
-  border-radius: 4px;
-  background: linear-gradient(90deg, #0c9e88, #0c6e9e);
-  width: 75%;
+  background-color: #0c9e88;
+  transition: width 0.3s ease-in-out;
 }
 
-.progress-text {
-  color: #0c9e88;
-  font-size: 0.9rem;
+.hobby-container {
+  background-color: #e0e0e0;
+  border-radius: 12px;
+  padding: 60px 30px;
 }
 
-/* Responsive Design */
-@media (min-width: 768px) {
-  .skills-container {
-    flex-direction: row;
-  }
-
-  .img {
-    width: 45%;
-    height: auto;
-  }
-
-  .skills-section {
-    width: 55%;
-    padding: 50px;
-  }
+.hobby-section {
+  width: 55%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  color: #0a1a1f;
 }
 
-/* Dropdown Menu */
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #11232a;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
+.hobby-item {
+  background-color: #f8f8f8;
+  padding: 20px;
   border-radius: 8px;
-  padding: 10px 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  border-left: 4px solid #0c9e88;
+  display: flex;
+  gap: 15px;
 }
 
-.dropdown-content a {
-  color: white;
-  padding: 10px 20px;
-  text-decoration: none;
-  display: block;
+.hobby-icon {
+  font-size: 24px;
+  color: #0c9e88;
+}
+
+.hobby-content h3 {
+  margin: 0 0 8px 0;
+  font-size: 1.2rem;
+}
+
+.hobby-content p {
+  margin: 0;
+}
+
+.reviews-container {
+  padding: 60px 0;
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+  color: black;
+}
+
+.reviews-section {
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 50px;
+  text-align: center;
+}
+
+.review-item {
+  padding: 30px 40px;
+}
+
+.review-item h3 {
+  font-size: 2rem;
+  margin: 0 0 10px;
+}
+
+.review-item span {
   font-size: 0.9rem;
 }
 
-.dropdown-content a:hover {
-  background-color: #1d3a44;
-  color: #0c9e88;
+.showcase-wrapper {
+  width: 80%;
+  margin: 60px auto;
+  background-color: #f3f3f3;
+  border-radius: 12px;
+  padding: 40px 20px 0;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
 }
 
-.dropdown:hover .dropdown-content {
-  display: block;
+.image-showcase p {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+  color: #222;
 }
 
-.dropdown:hover .dropbtn {
-  color: #0c9e88;
+.image-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.image-flex a {
+  width: 45%;
+  max-width: 260px;
+  min-width: 200px;
+}
+
+.image-flex a img {
+  width: 100%;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.image-flex a img:hover {
+  transform: scale(1.05);
+}
+
+.logo-footer {
+  background-color: #0c9e88;
+  padding: 25px 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  border-radius: 0 0 12px 12px;
+  color: white;
+}
+
+.logo-icon {
+  font-size: 2rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.logo-icon:hover {
+  transform: scale(1.2);
+  color: #e0e0e0;
+}
+
+@media (max-width: 991px) {
+
+  .skills-container,
+  .hobby-container section {
+    flex-direction: column;
+  }
+
+  .skills-section,
+  .hobby-section,
+  .img {
+    width: 100%;
+  }
+
+  .hobby-section {
+    grid-template-columns: 1fr;
+  }
+
+  .reviews-section {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+    .image-flex {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .image-flex a {
+      width: 80%;
+      max-width: 300px;
+    }
+  
+    .logo-footer {
+      flex-direction: row;
+      justify-content: center;
+      gap: 30px;
+    }
+}
+
+@media (max-width: 576px) {
+  .reviews-section {
+    grid-template-columns: 1fr;
+  }
 }
