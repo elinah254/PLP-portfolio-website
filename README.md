@@ -1,7 +1,7 @@
 # Group-portfolio-assignment
 Recreating a portfolio website as is using HTML and CSS.
 
-## 👥 Group Members
+## 👥 Group Members/ Collaborators
 
  1. Elinah Mmbone    mmboneelinah@gmail.com
  2.
@@ -64,7 +64,6 @@ cd PLP-portfolio-website
 * [x] Website recreated using only **HTML** and **CSS**  
 * [x] Clean and readable code with comments  
 * [x] Mobile responsive  
-* [x] All group members contributed  
 * [x] GitHub repository with all files and README  
 
 ## 🧑‍⚖️ Evaluation Criteria Mapping
@@ -73,8 +72,7 @@ cd PLP-portfolio-website
 | ---------------------------- | --------------------------------------------------- |
 | Functionality & Requirements | Fully recreated all sections using only HTML & CSS  |
 | Code Quality & Structure     | Clean semantic HTML, organized CSS, and comments    |
-| UI/UX & Responsiveness       | Mobile-friendly, clean layout, consistent design    |
-| Collaboration & Teamwork     | All group members contributed equally               | |
+| UI/UX & Responsiveness       | Mobile-friendly, clean layout, consistent design    |           
 | Presentation (README, demo)  | Comprehensive README and clear project structure    |
 
 ## 📧 Contact
