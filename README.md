@@ -5,7 +5,7 @@ Recreating a portfolio website as is using HTML and CSS.
 
  1. Elinah Mmbone    mmboneelinah@gmail.com
  2. Ajao Oluwaseun   Ajayholuwaseun@gmail.com
- 3.
+ 3. Akwana Oliver akwanaoliver@gmail.com 
  4.
 
 
