@@ -4,7 +4,7 @@ Recreating a portfolio website as is using HTML and CSS.
 ## 👥 Group Members/ Collaborators
 
  1. Elinah Mmbone    mmboneelinah@gmail.com
- 2.
+ 2. Ajao Oluwaseun   Ajayholuwaseun@gmail.com
  3.
  4.
 
